@@ -16,11 +16,12 @@ import time
 yourSentence = input("\nType or paste the text you wish to be analyze:\n")
 def get_calculation(): # def functionality
     # essential global variables
-    sentenceL = len(yourSentence) # storing length functionality to the variable sentenceL =  Sentence length
     wordC = 1   # wordC = Word count
     vowelC = 0      # vowelC = Vowel count
     consonantC = 0      # consonantC = Consonant count
+    
     # additional secondary text information
+    sentenceL = len(yourSentence) # storing length functionality to the variable sentenceL =  Sentence length
     spaceC = 0     # spaceC=  Space count
     charC = 0   #charC = Character count
     # List of the assignments stored in a variable
@@ -56,4 +57,4 @@ print("[1]")
 time.sleep(1)
 # Display the result of the text evaluation
 print(f"\nThe system successfully scanned your text!\nYour text: {yourSentence}")
-print(f"\nWord count: {wordC}\nVowel count: {vowelC}\nConsonant count: {consonantC}\n\n[Additional Text Information]\nCharacter count: {charC}\nSpace count:{spaceC}\n")
+print(f"\nText Evaluation:\nWord count: {wordC}\nVowel count: {vowelC}\nConsonant count: {consonantC}\n\n[Additional Text Information]\nCharacter count: {charC}\nSpace count:{spaceC}\n")
