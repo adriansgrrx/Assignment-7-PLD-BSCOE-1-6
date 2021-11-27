@@ -11,9 +11,17 @@
 time module will be used in this program
 """ 
 import time
+#Greetings
+print("\nWelcome to Text Evaluator Center: The Text Expert!")
+time.sleep(2)
+
+# system-user communication section
+name = input("\nHi!\nPlease enter your name:\nName: ")
+print(f"\nGreat, {name.title()}! We are all set!")
+time.sleep(2)
 
 # Ask for a text input
-yourSentence = input("\nType or paste the text you wish to be analyze:\n")
+yourSentence = input("\nType or paste the text you wish to be analyzed:\n")
 def get_calculation(): # def functionality
     # essential global variables
     wordC = 1   # wordC = Word count
@@ -57,4 +65,5 @@ print("[1]")
 time.sleep(1)
 # Display the result of the text evaluation
 print(f"\nThe system successfully scanned your text!\nYour text: {yourSentence}")
-print(f"\nText Evaluation:\nWord count: {wordC}\nVowel count: {vowelC}\nConsonant count: {consonantC}\n\n[Additional Text Information]\nCharacter count: {charC}\nSpace count:{spaceC}\n")
+print(f"\nText Evaluation:\nWord count: {wordC}\nVowel count: {vowelC}\nConsonant count: {consonantC}\n\n[Additional Text Information]\nCharacter count: {charC}\nSpace count: {spaceC}\n")
+print(f"Thank you {name.title()} for using Text Evaluator! Have a good day ahead!\n")
