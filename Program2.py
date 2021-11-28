@@ -10,15 +10,26 @@
 # ouput: Valid
 
 """
-Regular Expression (regex) module will be used in this program
+Regular Expression (regex) and Time module will be used in this program
 """
 import re   # regex module
+import time 
+
+#Greetings
+print("\nWelcome to Password Generator!")
+time.sleep(2)
+
+# system-user communication section
+name = input("\nHi there! Please enter your name first:\nName: ")
+print(f"\nGreat, {name.title()}! We can proceed now!")
+time.sleep(2)
+
 
 # while functionality for looping
 while True:
     # Ask for the user input
-    password = input("\nEnter your password: ")
-  
+    password = input(f"\n{name.title()}, please enter your password: ")
+    time.sleep(2)
     # f-elif statements section
     if (len(password) < 15): # len functionality to determine the length of the input then compete with the integer 15(standard char input)
         print("\n[Invalid Input]\nPassword must be 15 charcters and above.\n") # if not satisfied, display.
@@ -42,7 +53,9 @@ while True:
     elif re.match(r"[a-z A-Z 0-9 !@#$%^&*()_+]{15}", password): # match the string to a pattern/variable including 'r'= raw-string and 15 which is the standard number of the password.
         format = re.compile(r"[a-z A-Z 0-9 !@#$%^&*()_+]{15}") # .compile() to compile regular exp. objects
         result = format.match(password) 
-        print("\n[Password Status: Strong]\nValid password!\n") #display if satisfied
+        print("\n[Password Status: Strong]\nValid password!") #display if satisfied
+        time.sleep(2)
+        print(f"\nYou can now use [{password}] as your new password! Have a great day {name.title()}!\n")
         break 
         # End of the program, incase the condition satisfied.
         """
@@ -52,3 +65,4 @@ while True:
     else:
         print("\n[Invalid Password]\nPassword Criteria:\n> Greater than 15 letters.\n> Have at least one capital letter.\n> Have at least one number.\n> Have at least one special character (!@#$%^&*()_+ etc)\n")
     # the loop will take over...    
+    time.sleep(2)
